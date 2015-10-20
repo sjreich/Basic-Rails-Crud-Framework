@@ -1,11 +1,13 @@
 <header>
   <div class="navbar navbar-default">
-    <%= link_to "Big Title", root_path, id: "logo" %>
+    <%= link_to main_title, root_path, id: "logo" %>
     <ul class="nav nav-pills">
+
+      <li><%= link_to "Link1", '#' %></li>
+      <li><%= link_to "Link2", '#' %></li>
+
       <% if current_user != nil %>
-        <li id="loginIdentifier"style="padding: 10px 30px 0 0">
-          Logged in as: <%= full_name(current_user) %>
-        </li>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             User Menu <b class="caret"></b>
@@ -18,9 +20,16 @@
             <li><%= link_to "Log out", logout_path, method: :delete %></li>
           </ul>
         </li>
+
+        <li id="loginIdentifier"style="padding: 10px 30px 0 0">
+          <small>Logged in as: <%= full_name(current_user) %></small>
+          <% if current_user.admin? %>
+            <small>(admin)</small>
+          <% end %>
+        </li>
+
       <% end %>
-      <li><%= link_to "Link1", '#' %></li>
-      <li><%= link_to "Link2", '#' %></li>
+
     </ul>
   </div>
 </header>

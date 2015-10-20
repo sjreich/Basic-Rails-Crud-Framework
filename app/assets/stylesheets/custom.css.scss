@@ -5,6 +5,7 @@ $color1: #FFFFFF;
 $color2: #CCCCCC;
 $color3: #888888;
 $bootstrapBlue: #337ab7;
+$skyBlue: #E6E6FF;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -25,6 +26,7 @@ header {
   .navbar {
     padding: 20px;
     border: 1px solid black;
+    background-color: $skyBlue;
   }
 
   #logo {
@@ -54,6 +56,11 @@ footer {
 h1 {
   text-align: center;
   margin-bottom: 20px;
+}
+
+/* home page */
+.jumbotron {
+  background-color: $skyBlue;
 }
 
 /* index pages */
@@ -89,6 +96,7 @@ h1 {
 /* form pages*/
 input {
   margin-bottom: 20px;
+  width: 100%;
   @include box_sizing;
 }
 
