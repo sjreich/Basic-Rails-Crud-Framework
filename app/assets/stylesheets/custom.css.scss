@@ -93,6 +93,26 @@ h1 {
   width: 100%;
 }
 
+/* display box */
+.display-box {
+  margin-bottom: 40px;
+
+  /*centering*/
+  float: right;
+  position: relative;
+  right: 50%;
+  text-align: left;
+  * {
+    position: relative;
+    left: 50%;
+
+    /* actual styling */
+    padding: 20px 40px 20px 40px;
+    border: 1px solid black;
+    background-color: $skyBlue;
+  }
+}
+
 /* form pages*/
 input {
   margin-bottom: 20px;
