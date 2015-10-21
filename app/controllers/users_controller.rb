@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       flash[:success] = "Changes saved."
       redirect_to @user
     else
-      flash[:danger] = @user.errors.full_messages.first
+      flash.now[:danger] = @user.errors.full_messages.first
       render 'edit'
     end
   end
